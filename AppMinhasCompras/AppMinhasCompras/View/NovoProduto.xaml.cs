@@ -34,11 +34,11 @@ namespace AppMinhasCompras.View
                 await DisplayAlert("Sucesso", "Produto Cadastrado", "OK");
 
                 await Navigation.PushAsync(new Listagem());
-               // Navigation.PushAsync(new NovoProduto());
+               
             }
             catch (Exception ex)
             {
-                DisplayAlert("Ops", ex.Message, "OK");
+                await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
     }
