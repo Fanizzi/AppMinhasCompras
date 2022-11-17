@@ -23,24 +23,26 @@ namespace AppMinhasCompras.Helper
 
         public void Update(Produto p)
         {
-            string sql = "UPDATE Produto SET Descricao=?, Quantidade=?, Preco=? WHETE id= ?";
+            string sql = "UPDATE Produto SET Descricao=?, Quantidade=?, Preco=? WHERE id= ?";
 
             _connection.QueryAsync<Produto>(sql, p.Descricao, p.Quantidade, p.Preco, p.Id);
         }
 
-        public Task<Produto> getById(int id)
-        {
-            return new Produto();
-        }
-
-        public Task<List<Produto>> getAll()
+        public Task<List<Produto>> GetAll()
         {
             return _connection.Table<Produto>().ToListAsync();
         }
 
-        public void Delete(int id)
+        public Task<int> Delete (int id)
         {
-            _connection.Table<Produto>().DeleteAsync(i => i.Id == id);
+            return _connection.Table<Produto>().DeleteAsync(i => i.Id == id);
+        }
+
+        public Task<List<Produto>> Search(string q)
+        {
+            string sql = "SELECT * FROM Produto WHERE Descricao LIKE '%" + q + "%' ";
+
+            return _connection.QueryAsync<Produto>(sql);
         }
     }
 }
