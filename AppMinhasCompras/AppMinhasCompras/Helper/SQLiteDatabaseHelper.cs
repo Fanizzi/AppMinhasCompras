@@ -21,11 +21,11 @@ namespace AppMinhasCompras.Helper
             return _connection.InsertAsync(p);
         }
 
-        public void Update(Produto p)
+        public Task<List<Produto>> Update(Produto p)
         {
             string sql = "UPDATE Produto SET Descricao=?, Quantidade=?, Preco=? WHERE id= ?";
 
-            _connection.QueryAsync<Produto>(sql, p.Descricao, p.Quantidade, p.Preco, p.Id);
+            return _connection.QueryAsync<Produto>(sql, p.Descricao, p.Quantidade, p.Preco, p.Id);
         }
 
         public Task<List<Produto>> GetAll()
