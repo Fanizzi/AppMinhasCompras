@@ -9,13 +9,13 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Descrição:" />
-            <Entry x:Name="txt_descricao" Text="{Binding Descricao}"/>
+            <Label Text="Descrição:" FontAttributes="Bold" FontSize="Medium" />
+            <Entry x:Name="txt_descricao" Text="{Binding Descricao}" />
 
-            <Label Text="Quantidade:"/>
+            <Label Text="Quantidade:" FontAttributes="Bold" FontSize="Medium" />
             <Entry x:Name="txt_quantidade" Text="{Binding Quantidade}"/>
 
-            <Label Text="Preço:"/>
+            <Label Text="Preço:" FontAttributes="Bold" FontSize="Medium"/>
             <Entry x:Name="txt_preco" Text="{Binding Preco}"/>
         </StackLayout>
     </ContentPage.Content>

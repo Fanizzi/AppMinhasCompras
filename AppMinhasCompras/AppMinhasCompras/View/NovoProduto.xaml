@@ -10,13 +10,13 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Descrição:" />
+            <Label Text="Descrição:" FontAttributes="Bold" FontSize="Medium" />
             <Entry x:Name="txt_descricao" />
 
-            <Label Text="Quantidade:"/>
+            <Label Text="Quantidade:" FontAttributes="Bold" FontSize="Medium" />
             <Entry x:Name="txt_quantidade" />
 
-            <Label Text="Preço:"/>
+            <Label Text="Preço:" FontAttributes="Bold" FontSize="Medium" />
             <Entry x:Name="txt_preco" />
         </StackLayout>
     </ContentPage.Content>

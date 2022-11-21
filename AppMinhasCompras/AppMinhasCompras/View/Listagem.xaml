@@ -21,9 +21,11 @@
                     <ListView.Header>
                         <Grid RowDefinitions="Auto"
                               ColumnDefinitions="*, Auto, Auto">
-                            <Label Grid.Row="0" Grid.Column="0" Text="Descrição" />
-                            <Label Grid.Row="0" Grid.Column="1" Text="Qnt" />
-                            <Label Grid.Row="0" Grid.Column="2" Text="Preço" />
+
+                            <Label Grid.Row="0" Grid.Column="0" Text="Descrição" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Grid.Row="0" Grid.Column="1" Text="Qnt" FontAttributes="Bold" FontSize="Medium" />
+                            <Label Grid.Row="0" Grid.Column="2" Text="Preço" FontAttributes="Bold" FontSize="Medium" />
+                            
                         </Grid>
                     </ListView.Header>
                     <ListView.ItemTemplate>
@@ -34,9 +36,11 @@
                                 </ViewCell.ContextActions>
                                 <Grid RowDefinitions="Auto"
                                       ColumnDefinitions="*, Auto, Auto">
-                                      <Label Grid.Row="0" Grid.Column="0" Text="{Binding Descrição}" />
-                                      <Label Grid.Row="0" Grid.Column="1" Text="{Binding Quantidade}" />
-                                      <Label Grid.Row="0" Grid.Column="2" Text="{Binding Preco}" />
+                                    
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Descricao}" Margin="10"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Quantidade}" Margin="10"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding Preco}" Margin="10" />
+
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>
